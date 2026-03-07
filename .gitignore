@@ -1,0 +1,28 @@
+# Worktrees
+.worktrees/
+
+# Private files
+.private-journal/
+REVIEW.md
+Future Development.txt
+
+# Claude Code
+.claude/
+
+# macOS
+.DS_Store
+
+# Editors
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-*
+
+# Environment
+.env
+.env.*
+
+# Dependencies
+node_modules/

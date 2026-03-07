@@ -1,0 +1,52 @@
+{
+  "name": "software-forge",
+  "owner": {
+    "name": "Ahmed Hamadto",
+    "url": "https://github.com/AhmedHamadto"
+  },
+  "metadata": {
+    "description": "Full software development lifecycle for AI coding agents — 28 skills, 17 engineering books, from idea to deployment",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "software-forge",
+      "source": ".",
+      "description": "Full software development lifecycle for AI coding agents — classifies your project, sequences design phases grounded in 17 engineering books, and orchestrates 28 skills from idea to deployment",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ahmed Hamadto"
+      },
+      "homepage": "https://github.com/AhmedHamadto/software-forge",
+      "repository": "https://github.com/AhmedHamadto/software-forge",
+      "license": "MIT",
+      "keywords": [
+        "claude-code",
+        "skills",
+        "software-engineering",
+        "project-lifecycle",
+        "orchestrator",
+        "tdd",
+        "system-design",
+        "security-audit",
+        "code-review",
+        "engineering-mentor",
+        "ui-design",
+        "ux-design",
+        "motion-design",
+        "accessibility"
+      ],
+      "category": "development-workflows",
+      "tags": [
+        "lifecycle",
+        "orchestrator",
+        "tdd",
+        "design",
+        "planning",
+        "security",
+        "debugging",
+        "code-review"
+      ]
+    }
+  ]
+}

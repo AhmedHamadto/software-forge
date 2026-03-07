@@ -1,0 +1,11 @@
+# Ensure consistent line endings
+*.sh text eol=lf
+*.cmd text eol=crlf
+*.md text eol=lf
+*.json text eol=lf
+*.js text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.gif binary

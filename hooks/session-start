@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# SessionStart hook — injects using-software-forge skill into every session
+
+set -euo pipefail
+
+# Find plugin root (parent of hooks/)
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PLUGIN_ROOT="$(dirname "$SCRIPT_DIR")"
+
+SKILL_FILE="$PLUGIN_ROOT/skills/using-software-forge/SKILL.md"
+
+if [[ ! -f "$SKILL_FILE" ]]; then
+  echo '{"hookSpecificOutput":{"additionalContext":"[software-forge] Warning: using-software-forge skill not found."}}'
+  exit 0
+fi
+
+# Read and strip YAML frontmatter
+CONTENT=$(awk '
+  BEGIN { in_front=0; started=0 }
+  /^---$/ && !started { in_front=1; started=1; next }
+  /^---$/ && in_front { in_front=0; next }
+  !in_front { print }
+' "$SKILL_FILE")
+
+# Escape for JSON (fast bash parameter substitution)
+CONTENT="${CONTENT//\\/\\\\}"
+CONTENT="${CONTENT//\"/\\\"}"
+CONTENT="${CONTENT//$'\n'/\\n}"
+CONTENT="${CONTENT//$'\t'/\\t}"
+
+# Output for both Claude Code and Cursor
+cat <<ENDJSON
+{"hookSpecificOutput":{"additionalContext":"$CONTENT"},"additional_context":"$CONTENT"}
+ENDJSON

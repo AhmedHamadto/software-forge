@@ -1,0 +1,88 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          for f in .claude-plugin/plugin.json .cursor-plugin/plugin.json; do
+            echo "Validating $f..."
+            python3 -c "import json; json.load(open('$f'))"
+          done
+
+      - name: Verify install script
+        run: |
+          chmod +x install.sh
+          bash install.sh --list
+
+      - name: Check skill count matches plugin.json
+        run: |
+          dir_count=$(ls -d skills/*/ | wc -l | tr -d ' ')
+          json_count=$(python3 -c "import json; print(len(json.load(open('.claude-plugin/plugin.json'))['skills']))")
+          echo "Skill directories: $dir_count"
+          echo "Plugin.json entries: $json_count"
+          if [ "$dir_count" != "$json_count" ]; then
+            echo "MISMATCH: $dir_count directories vs $json_count plugin entries"
+            exit 1
+          fi
+
+      - name: Check all skills have SKILL.md
+        run: |
+          missing=0
+          for d in skills/*/; do
+            if [ ! -f "$d/SKILL.md" ]; then
+              echo "Missing SKILL.md in $d"
+              missing=$((missing + 1))
+            fi
+          done
+          if [ $missing -gt 0 ]; then
+            echo "$missing skills missing SKILL.md"
+            exit 1
+          fi
+
+      - name: Check all phase files exist
+        run: |
+          missing=0
+          for phase in \
+            phase-00.5-system-assessment \
+            phase-01-brainstorming \
+            phase-02-domain-modeling \
+            phase-03-system-design \
+            phase-04-resilience \
+            phase-05-ml-pipeline \
+            phase-06-edge-architecture \
+            phase-07-api-specification \
+            phase-08-voice-prompt \
+            phase-09-infrastructure \
+            phase-10-ui-design \
+            phase-11-ux-design \
+            phase-12-motion-design \
+            phase-13-cost-analysis \
+            phase-14-writing-plans \
+            phase-15-implementation \
+            phase-16-security-validation \
+            phase-17-observability \
+            phase-18-ml-validation \
+            phase-19-polish-review \
+            phase-20-retrospective; do
+            if [ ! -f "skills/software-forge/phases/${phase}.md" ]; then
+              echo "Missing phase file: ${phase}.md"
+              missing=$((missing + 1))
+            fi
+          done
+          if [ $missing -gt 0 ]; then
+            echo "$missing phase files missing"
+            exit 1
+          fi
+
+      - name: Shellcheck install script
+        run: shellcheck install.sh || true
