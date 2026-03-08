@@ -351,7 +351,7 @@ Optional: See [docs/recommended-mcps.md](docs/recommended-mcps.md) for free tool
 
 ### Problem Statement
 
-Software Forge has 28 skills, which is powerful but intimidating for new users. The install is all-or-nothing. The `using-software-forge` meta-skill is aggressive in tone. The README is 19KB. These friction points reduce adoption without adding value.
+Software Forge has 26 skills, which is powerful but intimidating for new users. The install is all-or-nothing. The `using-software-forge` meta-skill is aggressive in tone. The README is 19KB. These friction points reduce adoption without adding value.
 
 ---
 
@@ -390,7 +390,7 @@ usage() {
   echo "  ./install.sh --web        Core + UI/UX + security + system design (19 skills)"
   echo "  ./install.sh --mobile     Core + iOS/macOS design + security (18 skills)"
   echo "  ./install.sh --learn      Core + engineering mentor (15 skills)"
-  echo "  ./install.sh --full       Everything (28 skills)"
+  echo "  ./install.sh --full       Everything (26 skills)"
   echo "  ./install.sh --list       List available skills"
   echo "  ./install.sh --uninstall  Remove all symlinks"
   echo "  ./install.sh skill1 ...   Install specific skills only"
@@ -527,12 +527,12 @@ Skip Phase 0 (classification) entirely — the user has already told us this is 
 
 Full software development lifecycle for AI coding agents.
 Classifies your project, sequences design phases grounded in
-17 engineering books, and orchestrates 28 skills from idea
+17 engineering books, and orchestrates 26 skills from idea
 to deployment.
 
 ## Install
 
-# One command — installs all 28 skills
+# One command — installs all 26 skills
 git clone https://github.com/AhmedHamadto/software-forge.git
 cd software-forge && ./install.sh
 
@@ -563,7 +563,7 @@ for free tools that enhance specific phases.
 ## Learn More
 
 - [Architecture](docs/ARCHITECTURE.md) — How it works under the hood
-- [Skills List](docs/) — All 28 skills with descriptions
+- [Skills List](docs/) — All 26 skills with descriptions
 - [Contributing](CONTRIBUTING.md) — How to add skills or improve phases
 - [Improvement Plan](docs/improvement.md) — Current roadmap
 ```

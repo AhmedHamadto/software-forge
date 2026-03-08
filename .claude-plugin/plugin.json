@@ -1,7 +1,7 @@
 {
   "name": "software-forge",
   "version": "1.0.0",
-  "description": "Full software development lifecycle for AI coding agents — classifies your project, sequences design phases grounded in 17 engineering books, and orchestrates 28 skills from idea to deployment",
+  "description": "Full software development lifecycle for AI coding agents — classifies your project, sequences design phases grounded in 17 engineering books, and orchestrates 26 skills from idea to deployment",
   "author": {
     "name": "Ahmed Hamadto",
     "url": "https://github.com/AhmedHamadto"

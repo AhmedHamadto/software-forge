@@ -48,16 +48,18 @@ An adaptive teaching layer that wraps software-forge:
 - **Accessibility-by-design**: WCAG compliance questions injected at DDIA Phase 8
 - **Cost estimation**: Unit economics and scale projections in infrastructure phase
 
-### Bundled Skills (28 total)
+### Bundled Skills (26 total)
 - **Orchestrator**: software-forge, engineering-mentor
 - **Design & Planning**: brainstorming, ddia-design, writing-plans
 - **Execution**: executing-plans, subagent-driven-development, dispatching-parallel-agents, test-driven-development, systematic-debugging, verification-before-completion, using-git-worktrees, finishing-a-development-branch
 - **Code Review**: requesting-code-review, receiving-code-review
-- **Security**: security-audit, web-app-security-audit, repo-scan, legal-audit
+- **Security**: security-audit, web-app-security-audit
 - **Review & Polish**: ui-polish-review, ux-usability-review, design-code-review, code-simplifier, apple-craftsman, mobile-ios-design
 - **Specialty**: voice-agent-prompt
 - **Release**: release
 - **Meta**: using-software-forge
+
+*Note: repo-scan, legal-audit, and pre-commit-review moved to [developer-guard](https://github.com/AhmedHamadto/developer-guard).*
 
 ### Platform Support
 - Claude Code: Plugin manifest + SessionStart hook
@@ -72,8 +74,8 @@ An adaptive teaching layer that wraps software-forge:
 - `/write-plan` — Standalone implementation planning
 - `/execute-plan` — Standalone plan execution
 - `/security-audit` — Standalone security audit
-- `/repo-scan` — Scan for secrets and PII
-- `/legal-audit` — Audit legal and IP risks
+- `/repo-scan` — *(moved to developer-guard)*
+- `/legal-audit` — *(moved to developer-guard)*
 
 ### Grounded In
 17 software engineering books:

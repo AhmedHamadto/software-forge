@@ -5,7 +5,7 @@
     "url": "https://github.com/AhmedHamadto"
   },
   "metadata": {
-    "description": "Full software development lifecycle for AI coding agents — 28 skills, 17 engineering books, from idea to deployment",
+    "description": "Full software development lifecycle for AI coding agents — 26 skills, 17 engineering books, from idea to deployment",
     "version": "1.0.0"
   },
   "plugins": [
@@ -15,7 +15,7 @@
         "source": "url",
         "url": "https://github.com/AhmedHamadto/software-forge.git"
       },
-      "description": "Full software development lifecycle for AI coding agents — classifies your project, sequences design phases grounded in 17 engineering books, and orchestrates 28 skills from idea to deployment",
+      "description": "Full software development lifecycle for AI coding agents — classifies your project, sequences design phases grounded in 17 engineering books, and orchestrates 26 skills from idea to deployment",
       "version": "1.0.0",
       "author": {
         "name": "Ahmed Hamadto"

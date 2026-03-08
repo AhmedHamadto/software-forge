@@ -51,8 +51,6 @@ These commands are available in Claude Code after installation:
 | `/write-plan` | Create a TDD implementation plan from a design doc |
 | `/execute-plan` | Execute an implementation plan with review checkpoints |
 | `/security-audit` | Audit CSP, RLS, auth, dependencies, and OWASP vulnerabilities |
-| `/repo-scan` | Scan for secrets, personal data, hardcoded paths before publishing |
-| `/legal-audit` | Audit license, IP, attribution, and claims accuracy |
 
 ## What's Inside
 
@@ -97,8 +95,8 @@ These commands are available in Claude Code after installation:
 |-------|---------|
 | **security-audit** | Audits CSP, RLS, auth, dependencies, and OWASP vulnerabilities |
 | **web-app-security-audit** | 10-phase penetration testing methodology for web applications |
-| **repo-scan** | Scans for secrets, personal data, hardcoded paths, and attribution gaps before publishing |
-| **legal-audit** | Audits license compliance, IP risks, attribution, and claims accuracy before going public |
+
+*repo-scan, legal-audit, and pre-commit-review moved to [developer-guard](https://github.com/AhmedHamadto/developer-guard).*
 
 ### Review & Polish
 
