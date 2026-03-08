@@ -103,11 +103,18 @@ Read the existing `RELEASE-NOTES.md` to match the project's established style an
 
 ### Step 4: Update Version References
 
-Update the version string wherever it appears in the project:
-- `package.json`, `Cargo.toml`, `pyproject.toml`, or equivalent
-- README badges or version references
-- Plugin manifests (`plugin.json`, `marketplace.json`)
-- Any other files that embed the version
+Update the version string in every manifest file that exists:
+
+| File | Fields to update |
+|------|-----------------|
+| .claude-plugin/plugin.json | .version |
+| .claude-plugin/marketplace.json | .metadata.version AND .plugins[].version |
+| .cursor-plugin/plugin.json | .version (if exists) |
+| .codex/plugin.json | .version (if exists) |
+| package.json | .version |
+| Cargo.toml / pyproject.toml | version field |
+
+Also check for README badges or version references.
 
 ### Step 5: Commit
 
