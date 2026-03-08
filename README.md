@@ -11,7 +11,7 @@ teaches you engineering principles at every decision point.
 > "I have an idea. Now what? In what order? How do the pieces
 > connect? And can you teach me why along the way?"
 
-[DEMO GIF PLACEHOLDER — will be added after recording]
+![Software Forge demo](assets/demo.gif)
 
 ## Install
 
