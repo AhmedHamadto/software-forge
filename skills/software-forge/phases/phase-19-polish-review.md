@@ -28,3 +28,7 @@ After running the primary review skills above, check for:
    (not training-data-stale docs)
 
 These are additive — they enhance the review, they don't replace it.
+
+### Developer Guard Integration
+
+If developer-guard is installed, invoke its repo-scan and legal-audit skills here. If not, continue with built-in security validation.

@@ -11,4 +11,8 @@ Run BEFORE deployment. Verify that security-by-design decisions from Phase 3 wer
 - Firmware integrity: signed updates, verified on device
 - Physical security: what credentials are on the device if someone steals it?
 
+### Developer Guard Integration
+
+If developer-guard is installed, invoke its repo-scan and legal-audit skills here. If not, continue with built-in security validation.
+
 **Output:** Security audit report

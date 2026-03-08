@@ -90,6 +90,10 @@ The execution pipeline skills (writing-plans, executing-plans, subagent-driven-d
 
 The plugin packaging structure, multi-platform configs (`.claude-plugin/`, `.cursor-plugin/`, `.codex/`, `.opencode/`), slash commands, and distribution approach are modeled after [everything-claude-code](https://github.com/affaan-m/everything-claude-code) by Affaan Mustafa.
 
+## Companion
+
+Pairs with [developer-guard](https://github.com/AhmedHamadto/developer-guard) for pre-commit safety and pre-launch audits.
+
 ## License
 
 MIT

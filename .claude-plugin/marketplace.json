@@ -11,7 +11,10 @@
   "plugins": [
     {
       "name": "software-forge",
-      "source": "https://github.com/AhmedHamadto/software-forge",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/AhmedHamadto/software-forge.git"
+      },
       "description": "Full software development lifecycle for AI coding agents — classifies your project, sequences design phases grounded in 17 engineering books, and orchestrates 28 skills from idea to deployment",
       "version": "1.0.0",
       "author": {
