@@ -24,14 +24,14 @@ jobs:
           chmod +x install.sh
           bash install.sh --list
 
-      - name: Check skill count matches plugin.json
+      - name: Check skills directory is configured
         run: |
-          dir_count=$(ls -d skills/*/ | wc -l | tr -d ' ')
-          json_count=$(python3 -c "import json; print(len(json.load(open('.claude-plugin/plugin.json'))['skills']))")
-          echo "Skill directories: $dir_count"
-          echo "Plugin.json entries: $json_count"
-          if [ "$dir_count" != "$json_count" ]; then
-            echo "MISMATCH: $dir_count directories vs $json_count plugin entries"
+          skills_path=$(python3 -c "import json; print(json.load(open('.claude-plugin/plugin.json'))['skills'])")
+          echo "Skills path: $skills_path"
+          dir_count=$(ls -d skills/*/SKILL.md | wc -l | tr -d ' ')
+          echo "Skill directories with SKILL.md: $dir_count"
+          if [ "$dir_count" -eq 0 ]; then
+            echo "ERROR: No skills found"
             exit 1
           fi
 
