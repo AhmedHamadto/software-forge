@@ -75,4 +75,9 @@
 
 Cost Ceiling: [Budget constraint if any]
 Cost-per-User: [$/user/month at projected scale]
+
+### Decision Log — Phase 9: Infrastructure
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

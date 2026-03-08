@@ -80,3 +80,12 @@ After completing the analysis, present a summary:
 ```
 
 If "Redesign required," identify which design phases need revisiting and why before proceeding to Phase 14.
+
+Append the following to the design doc:
+
+```markdown
+### Decision Log — Phase 13: Cost Analysis & Risk
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
+```

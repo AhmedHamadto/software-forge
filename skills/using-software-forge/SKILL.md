@@ -3,13 +3,16 @@ name: using-software-forge
 description: Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions
 ---
 
-<EXTREMELY-IMPORTANT>
-If you think there is even a 1% chance a skill might apply to what you are doing, you ABSOLUTELY MUST invoke the skill.
+## Core Rule
 
-IF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT.
+When a task matches a skill's description, invoke the skill before
+responding. When in doubt, check — the cost of reading a skill
+that doesn't apply is one read; the cost of skipping one that
+does apply is rework, missed quality gates, and inconsistent output.
 
-This is not negotiable. This is not optional. You cannot rationalize your way out of this.
-</EXTREMELY-IMPORTANT>
+Skills are invoked BEFORE responding, including before asking
+clarifying questions. The skill may contain the right way to ask
+those questions.
 
 ## How to Access Skills
 
@@ -53,24 +56,14 @@ digraph skill_flow {
 }
 ```
 
-## Red Flags
+## Common Mistakes
 
-These thoughts mean STOP—you're rationalizing:
-
-| Thought | Reality |
-|---------|---------|
-| "This is just a simple question" | Questions are tasks. Check for skills. |
-| "I need more context first" | Skill check comes BEFORE clarifying questions. |
-| "Let me explore the codebase first" | Skills tell you HOW to explore. Check first. |
-| "I can check git/files quickly" | Files lack conversation context. Check for skills. |
-| "Let me gather information first" | Skills tell you HOW to gather information. |
-| "This doesn't need a formal skill" | If a skill exists, use it. |
-| "I remember this skill" | Skills evolve. Read current version. |
-| "This doesn't count as a task" | Action = task. Check for skills. |
-| "The skill is overkill" | Simple things become complex. Use it. |
-| "I'll just do this one thing first" | Check BEFORE doing anything. |
-| "This feels productive" | Undisciplined action wastes time. Skills prevent this. |
-| "I know what that means" | Knowing the concept ≠ using the skill. Invoke it. |
+| What you're tempted to do | Why it's wrong |
+|--------------------------|---------------|
+| "Let me just answer this quickly" | Skills provide better answers. Check first. |
+| "I'll gather context, then check skills" | Skills tell you HOW to gather context. |
+| "I remember this skill's content" | Skills evolve between sessions. Always re-read. |
+| "This is too simple for a skill" | Simple tasks become complex. Skills prevent rework. |
 
 ## Skill Priority
 

@@ -8,6 +8,28 @@
 - *Designing Interface Animation* (Val Head)
 **Output:** Motion design section appended to design doc
 
+### Tool Integration (if available)
+
+Before starting the question-based motion design process, check for available tools:
+
+1. **Design Motion Principles skill installed?**
+   (check ~/.claude/skills/design-motion-principles/)
+   - If yes: Run the three-lens audit (Emil Kowalski, Jakub Krehel,
+     Jhey Tompkins) on the existing codebase first to identify
+     animation gaps and existing patterns.
+   - Use the audit output to pre-populate the State Transitions
+     and Choreography sections below.
+
+2. **Motion AI Kit / Motion MCP available?**
+   - If yes: Run /motion-audit to classify existing animations
+     by render pipeline cost (S-tier to F-tier).
+   - Use the audit to inform the Performance section.
+
+3. **Neither available?**
+   - Continue with the question-based approach below. The book-
+     grounded questions produce excellent motion design specs
+     without any tooling.
+
 ### Questions to Ask
 
 **Animation Principles (The Illusion of Life):**
@@ -65,4 +87,9 @@
 ### Reduced Motion
 - Fallback Strategy: [What happens with prefers-reduced-motion]
 - Motion-Dependent Alternatives: [Non-motion equivalents]
+
+### Decision Log — Phase 12: Motion Design
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

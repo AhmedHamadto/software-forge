@@ -56,4 +56,9 @@
 | Alert | Severity | Action |
 |-------|----------|--------|
 | [What] | [Page/Warning/Info] | [Runbook link] |
+
+### Decision Log — Phase 17: Observability
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

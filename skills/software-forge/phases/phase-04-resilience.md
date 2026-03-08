@@ -42,4 +42,9 @@ For **each external dependency** (API, database, message queue, third-party serv
 | Dependency | Failure Mode | Circuit Breaker | Timeout | Retry | Degradation |
 |-----------|-------------|----------------|---------|-------|-------------|
 | [Service] | [What breaks] | [Threshold] | [ms] | [Policy] | [Fallback] |
+
+### Decision Log — Phase 4: Resilience
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

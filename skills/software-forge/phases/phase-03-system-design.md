@@ -44,3 +44,12 @@ These questions are proactive — catching contrast issues and keyboard traps du
 ### Deliverable
 
 The standard DDIA design summary doc, with security and accessibility decisions integrated into each relevant phase (not as a separate section).
+
+Append the following to the design doc:
+
+```markdown
+### Decision Log — Phase 3: System Design + Security
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
+```

@@ -43,4 +43,9 @@ For **each system boundary** identified in Phase 3 (Data Flow):
 **Request:** { ... }
 **Response:** { ... }
 **Errors:** 400 (validation), 401 (auth), 429 (rate limit)
+
+### Decision Log — Phase 7: API Specification
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

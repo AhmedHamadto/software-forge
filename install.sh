@@ -16,6 +16,21 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SKILLS_SRC="$SCRIPT_DIR/skills"
 SKILLS_DST="${CLAUDE_SKILLS_DIR:-$HOME/.claude/skills}"
 
+# Named groups
+GROUP_CORE="software-forge using-software-forge brainstorming writing-plans \
+  executing-plans subagent-driven-development test-driven-development \
+  systematic-debugging using-git-worktrees finishing-a-development-branch \
+  verification-before-completion dispatching-parallel-agents \
+  requesting-code-review receiving-code-review code-simplifier"
+
+GROUP_WEB="$GROUP_CORE ui-polish-review ux-usability-review \
+  security-audit web-app-security-audit ddia-design"
+
+GROUP_MOBILE="$GROUP_CORE mobile-ios-design apple-craftsman \
+  design-code-review ux-usability-review security-audit"
+
+GROUP_LEARN="$GROUP_CORE engineering-mentor"
+
 # Colors (disabled if not a terminal)
 if [ -t 1 ]; then
   GREEN='\033[0;32m'
@@ -127,6 +142,11 @@ case "${1:-}" in
     echo ""
     echo "Usage:"
     echo "  ./install.sh              Install all skills"
+    echo "  ./install.sh --core       Core orchestrator + TDD + debugging + git + reviews (14 skills)"
+    echo "  ./install.sh --web        Core + UI/UX + security + system design (19 skills)"
+    echo "  ./install.sh --mobile     Core + iOS/macOS design + security (18 skills)"
+    echo "  ./install.sh --learn      Core + engineering mentor (15 skills)"
+    echo "  ./install.sh --full       Everything (28 skills)"
     echo "  ./install.sh --list       List available skills"
     echo "  ./install.sh --uninstall  Remove all symlinks"
     echo "  ./install.sh skill1 ...   Install specific skills only"
@@ -134,6 +154,29 @@ case "${1:-}" in
     echo "Environment:"
     echo "  CLAUDE_SKILLS_DIR   Override install directory (default: ~/.claude/skills)"
     exit 0
+    ;;
+  --core)
+    GROUP_SELECTED=true
+    SKILLS=($GROUP_CORE)
+    ;;
+  --web)
+    GROUP_SELECTED=true
+    SKILLS=($GROUP_WEB)
+    ;;
+  --mobile)
+    GROUP_SELECTED=true
+    SKILLS=($GROUP_MOBILE)
+    ;;
+  --learn)
+    GROUP_SELECTED=true
+    SKILLS=($GROUP_LEARN)
+    ;;
+  --full)
+    GROUP_SELECTED=true
+    SKILLS=()
+    for skill_dir in "$SKILLS_SRC"/*/; do
+      SKILLS+=("$(basename "$skill_dir")")
+    done
     ;;
 esac
 
@@ -149,14 +192,16 @@ if [ ! -d "$SKILLS_DST" ]; then
   info "Created $SKILLS_DST"
 fi
 
-# Determine which skills to install
-if [ $# -gt 0 ]; then
-  SKILLS=("$@")
-else
-  SKILLS=()
-  for skill_dir in "$SKILLS_SRC"/*/; do
-    SKILLS+=("$(basename "$skill_dir")")
-  done
+# Determine which skills to install (skip if group flag already set SKILLS)
+if [ "${GROUP_SELECTED:-}" != "true" ]; then
+  if [ $# -gt 0 ]; then
+    SKILLS=("$@")
+  else
+    SKILLS=()
+    for skill_dir in "$SKILLS_SRC"/*/; do
+      SKILLS+=("$(basename "$skill_dir")")
+    done
+  fi
 fi
 
 header "Installing ${#SKILLS[@]} skills..."

@@ -61,4 +61,9 @@
 - Provisioning: [Workflow]
 - OTA Updates: [Strategy, rollout %]
 - Health Monitoring: [Metrics, intervals, alerts]
+
+### Decision Log — Phase 6: Edge Architecture
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

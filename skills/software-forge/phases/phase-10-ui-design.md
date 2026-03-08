@@ -7,6 +7,22 @@
 - *Design Systems* (Alla Kholmatova)
 **Output:** UI design section appended to design doc
 
+### Tool Integration (if available)
+
+Before starting the question-based design process, check for available tools:
+
+1. **Figma MCP connected?** (check via /mcp)
+   - If yes: "Paste a link to your existing Figma file. I'll pull the
+     current design tokens (colors, spacing, typography, components)
+     and use them as the starting point for this phase."
+   - Use the extracted tokens to pre-fill the Visual Hierarchy and
+     Design System sections below, then validate with the user.
+
+2. **No design tool available?**
+   - Continue with the question-based approach below. This works
+     perfectly — the questions are designed to extract the same
+     information through dialogue.
+
 ### Questions to Ask
 
 **Visual Hierarchy (Refactoring UI):**
@@ -49,4 +65,9 @@
 - Tokens: [list]
 - Components: [list with variants]
 - Naming: [convention]
+
+### Decision Log — Phase 10: UI Design
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

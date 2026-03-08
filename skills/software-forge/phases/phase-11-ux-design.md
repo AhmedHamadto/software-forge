@@ -57,4 +57,9 @@
 - Screen Reader: [ARIA roles, labels]
 - Contrast: [Ratios verified]
 - Touch Targets: [Minimum sizes]
+
+### Decision Log — Phase 11: UX Design
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

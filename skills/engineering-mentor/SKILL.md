@@ -187,6 +187,50 @@ If the user asks "why did you pick X?" about any 🟢 decision, provide a full e
 
 Write to `~/.claude/engineer-profile/profile.md` and `docs/learning-ledger.md` immediately after each gate fires — not at the end of the phase, not at the end of the project. If the context window is lost, the files on disk preserve all learning progress.
 
+### Per-Phase Profile Write (Compaction-Proof)
+
+After EVERY phase gate (teaching, guide, or critical), update the engineer profile on disk:
+- Update the heat map confidence level for any concept that was taught or tested
+- Increment the Evidence Count
+- Update Last Touched to today
+- Append a row to the Session Ledger
+
+This makes profile updates incremental and compaction-proof. Do not defer profile writes to session end or Phase 20 — those instructions may be compacted away. Each gate firing is a self-contained profile update.
+
+---
+
+## Checkpoint Protocol
+
+After EVERY phase gate (teach, test, or auto), write or update
+the checkpoint file at `docs/plans/.mentor-checkpoint.json`.
+
+This is not optional. Compaction or session loss will destroy
+your gate state. The checkpoint file is your recovery mechanism.
+
+**Checkpoint file format:**
+```json
+{
+  "currentPhase": 13,
+  "mode": "learn",
+  "lastGateType": "teaching",
+  "conceptsTaughtThisSession": [
+    "Concept A",
+    "Concept B"
+  ],
+  "pendingConceptsNextPhase": [],
+  "profilePath": "~/.claude/engineer-profile/profile.md",
+  "designDocPath": "docs/plans/YYYY-MM-DD-<topic>-design.md",
+  "timestamp": "ISO-8601 timestamp"
+}
+```
+
+On resumption or post-compaction:
+1. Read `.mentor-checkpoint.json`
+2. Read the engineer profile from disk
+3. Re-announce: "Resuming Learn mode from Phase {currentPhase}.
+   Last session covered: {conceptsTaughtThisSession}."
+4. Continue with the correct gate protocol for the next phase
+
 ---
 
 ## Wrapper Flow

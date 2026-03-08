@@ -94,6 +94,20 @@ git commit -m "feat: add specific feature"
 - Reference relevant skills with @ syntax
 - DRY, YAGNI, TDD, frequent commits
 
+## Output Protocol (MANDATORY)
+
+After generating the full plan:
+1. Write the complete plan to `docs/plans/YYYY-MM-DD-<topic>-plan.md`
+2. Display ONLY a summary table to the conversation:
+
+| # | Task | Files | Tests | Est. Complexity |
+|---|------|-------|-------|-----------------|
+| 1 | [name] | [count] | [count] | S/M/L |
+
+3. End with: "Full plan saved to `docs/plans/[filename]`. [N] tasks, [M] files, [T] tests."
+
+Do NOT output the full plan to the conversation. The plan lives on disk.
+
 ## Execution Handoff
 
 After saving the plan, offer execution choice:

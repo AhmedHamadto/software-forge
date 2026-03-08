@@ -60,4 +60,9 @@
 - Drift Detection: [Method and thresholds]
 - Retraining Trigger: [Conditions]
 - Feedback Loop Latency: [Time from detection to retrained model deployed]
+
+### Decision Log — Phase 5: ML Pipeline
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

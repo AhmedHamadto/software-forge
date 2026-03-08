@@ -145,6 +145,10 @@
     "legal-audit": {
       "path": "skills/legal-audit/SKILL.md",
       "description": "Audit license compliance, IP risks, attribution, and claims accuracy before going public"
+    },
+    "pre-commit-review": {
+      "path": "skills/pre-commit-review/SKILL.md",
+      "description": "Contextual review of staged git changes — Layer 2 of the pre-commit gate"
     }
   }
 }

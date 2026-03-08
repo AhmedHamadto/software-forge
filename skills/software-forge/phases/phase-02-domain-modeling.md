@@ -42,4 +42,9 @@ Work through these one at a time:
 
 ### Context Map
 [How contexts relate and communicate]
+
+### Decision Log — Phase 2: Domain Modeling
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

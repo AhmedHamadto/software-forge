@@ -117,6 +117,9 @@ When entering Phase N:
 1. Read ./phases/phase-XX-name.md using the Read tool
 2. Follow its instructions exactly
 3. Produce the deliverable it specifies
+3b. Append a Decision Log entry to the design doc on disk
+    capturing: what was decided, what was rejected, why,
+    and any user corrections or teaching moments.
 4. Move to the next active phase in your compiled plan
 
 If you catch yourself thinking "I know what this phase does" —
@@ -183,6 +186,11 @@ If starting a new session mid-project:
 2. Read each doc to understand decisions already made
 3. Determine which phase produced the last artifact
 4. Resume from the next phase
+5. If `docs/plans/.mentor-checkpoint.json` exists, read it.
+   If mode is "learn", invoke engineering-mentor with the
+   stored state instead of continuing in Build mode.
+6. If the design doc contains `### Decision Log` sections,
+   read them to understand prior reasoning before continuing.
 
 **Artifact -> Phase mapping:**
 | Artifact | Phase Completed |

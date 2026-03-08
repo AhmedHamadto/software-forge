@@ -4,6 +4,15 @@
 **Input:** Completed project — all implementation and validation phases done
 **Output:** Retrospective section appended to design doc
 
+### Mandatory: Update Engineer Profile
+
+If running in Learn mode (check `docs/plans/.mentor-checkpoint.json`),
+update the engineer profile at `~/.claude/engineer-profile/profile.md`:
+- Add session ledger entries for concepts taught/tested
+- Promote competency levels where verification passed
+- Add this project to the project history section
+This step is NOT optional. Do it before the retrospective content.
+
 ### Purpose
 
 Capture what happened during the build so future projects benefit. This is not a code review (that was Phase 19). This is a process review — what the skill got right, what it got wrong, and what the engineer learned.
