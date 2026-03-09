@@ -1,6 +1,6 @@
 # Software Forge — Full Guide
 
-This document contains the complete reference for Software Forge, including all skill descriptions, phase details, book references, and troubleshooting. For a quick overview and installation instructions, see the [README](../README.md).
+This document contains the complete reference for Software Forge, including all skill descriptions, phase details, book references, and troubleshooting. For a quick overview and installation instructions, see the [README](../README.md). For a one-page cheat sheet, see the [Quick Reference](QUICK-REFERENCE.md).
 
 ---
 

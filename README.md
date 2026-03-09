@@ -91,6 +91,7 @@ Pairs with [developer-guard](https://github.com/AhmedHamadto/developer-guard) fo
 
 ## Docs
 
+- [Quick Reference](docs/QUICK-REFERENCE.md) — One-page cheat sheet — commands, skills, workflows, gotchas
 - [Full Guide](docs/FULL-GUIDE.md) — All 26 skills, phase details, book references, troubleshooting
 - [Architecture](docs/ARCHITECTURE.md) — How the orchestrator, phases, and skills connect
 - [Recommended MCPs](docs/recommended-mcps.md) — Free tools that enhance specific phases
