@@ -147,6 +147,29 @@ If confirmed:
 git push && git push --tags
 ```
 
+### Step 8: GitHub Release & Repo Metadata
+
+After pushing, complete the release on GitHub:
+
+1. **Create a GitHub Release** using `gh release create`:
+   ```bash
+   gh release create vX.Y.Z --title "Project Name vX.Y.Z" --notes "<release notes>"
+   ```
+   Use a condensed version of the RELEASE-NOTES.md entry — headline sections, changelog, key stats. Do not copy the entire file verbatim.
+
+2. **Update the repo description** if any stats changed (skill count, phase count, etc.):
+   ```bash
+   gh repo edit OWNER/REPO --description "Updated description"
+   ```
+
+3. **Verify both** by checking the repo page:
+   ```bash
+   gh repo view OWNER/REPO --json description
+   gh release view vX.Y.Z --repo OWNER/REPO
+   ```
+
+Do not skip this step. The GitHub Release is how users discover new versions, and the repo description is the first thing visitors see.
+
 ---
 
 ## Conventional Commit Prefixes
@@ -177,3 +200,5 @@ Use these in the Full Changelog section:
 | Skipping the tag | Tags are how users and tools identify releases |
 | Force-pushing a release | Never. If something is wrong, cut a new patch release. |
 | Releasing from a feature branch | Releases come from main unless the user explicitly confirms otherwise |
+| Pushing the tag but not creating a GitHub Release | Always create a GitHub Release — it's how users find new versions |
+| Forgetting to update the repo description | If stats changed (skill count, phase count), update the About section |
