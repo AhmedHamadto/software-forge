@@ -1,7 +1,6 @@
 ---
 name: code-simplifier
 description: Simplify complex code by removing unnecessary abstractions, over-engineering, and cognitive overhead. Use this skill at the end of coding sessions or to clean up complex PRs. Focuses on making code easier to read, understand, and maintain.
-license: MIT
 ---
 
 This skill analyzes code and aggressively simplifies it by removing unnecessary complexity, over-engineering, and cognitive overhead. The goal is code that is immediately understandable by any developer.

@@ -1,7 +1,7 @@
 {
   "name": "software-forge",
-  "version": "1.1.0",
-  "description": "Full software development lifecycle for AI coding agents — classifies your project, sequences design phases grounded in 17 engineering books, and orchestrates 26 skills from idea to deployment",
+  "version": "1.2.0",
+  "description": "Full software development lifecycle for AI coding agents — classifies your project, sequences design phases grounded in 17 engineering books, and orchestrates 30 skills from idea to deployment",
   "author": {
     "name": "Ahmed Hamadto",
     "url": "https://github.com/AhmedHamadto"
@@ -31,7 +31,11 @@
     "ios",
     "macos",
     "web-development",
-    "voice-agent"
+    "voice-agent",
+    "stack-audit",
+    "compatibility-oracle",
+    "architecture-patterns",
+    "brownfield-greenfield"
   ],
   "skills": "./skills/",
   "commands": "./commands/",

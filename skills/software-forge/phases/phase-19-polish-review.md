@@ -32,3 +32,28 @@ These are additive — they enhance the review, they don't replace it.
 ### Developer Guard Integration
 
 If developer-guard is installed, invoke its repo-scan and legal-audit skills here. If not, continue with built-in security validation.
+
+### Deliverable
+
+After all review skills complete, produce a review summary appended to the design doc:
+
+```markdown
+## Polish & Review Summary
+
+### Reviews Completed
+| Review Skill | Findings | Fixed | Deferred |
+|-------------|----------|-------|----------|
+| [skill name] | [count] | [count] | [count] |
+
+### Key Changes Made
+- [Change 1]: [What was fixed and why]
+- [Change 2]: [What was fixed and why]
+
+### Deferred Items
+- [Item]: [Why deferred, when to address]
+
+### Decision Log — Phase 19: Polish & Review
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Accepted:** [Finding left as-is] — [why it's acceptable].
+- **Deferred:** [Finding] — [why deferred, when to revisit].
+```

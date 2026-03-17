@@ -1,5 +1,96 @@
 # Release Notes
 
+## v1.2.0 (2026-03-17)
+
+### Architecture Analysis Suite
+
+Four new skills that give the forge deep architecture analysis capabilities — audit what you have, check what you're planning, query best practices, and compare brownfield vs greenfield approaches.
+
+**stack-audit** scans any project against a 15-domain, 7-layer taxonomy and produces a coverage matrix, gap analysis, maturity score (0-100), and prioritized recommendations. It answers "what do we have and how mature is it?" — useful when onboarding to a new codebase, planning tech debt work, or running a pre-launch readiness check.
+
+**stack-compatibility-oracle** is a pre-flight check for proposed tech stacks. Before writing code, it checks whether chosen technologies across layers actually work together — runtime compatibility, deployment fit, integration quality, scale limits, and team capability. It flags BLOCKER/WARNING/INFO issues and gives a GO / GO WITH CAVEATS / NO-GO verdict. Ships with 20 curated known incompatibilities and 6 proven stack references.
+
+**architecture-best-practices** is a queryable knowledge base of community-proven patterns across all 15 taxonomy domains. Supports four query modes: domain ("best practices for Data Storage"), combination ("Next.js + Supabase + Vercel"), problem ("API slow under load"), and comparison ("PostgreSQL vs DynamoDB for this use case"). Each practice includes why it matters, when it applies, and which other domains it affects.
+
+**brownfield-greenfield** extracts the intent graph from an existing project (what problems it solves, what patterns it uses, what constraints exist), strips away all technology choices, redesigns fresh using current best practices, and presents a side-by-side comparison. The user decides what (if anything) to change. Five phases: Extract, Abstract, Redesign, Compare, Discuss.
+
+### Orchestrator Fixes
+
+The phase routing and control flow got a thorough audit and several fixes:
+
+- **Phase 8 (Voice Prompt Design)** was a 5-line stub — expanded to a full 81-line phase with 20 questions, deliverable template, and decision log
+- **Route table phase counts** were wrong for all 6 project types (Phases 19 and 20 were added after counts were set). Corrected: macOS 8–10, iOS 8–15, Web FE 8–10, Full-Stack 14–17, Voice 13–15, Edge/IoT+ML 16–19
+- **Phase 15 → 16 handoff** was implicit — both execution paths (subagent-driven and executing-plans) now have explicit return-to-orchestrator instructions. The executing-plans path includes a warning that skipping Phases 16-20 means shipping without security validation
+- **Phase 13 Go/No-Go** had no loop-back mechanism when the verdict was "Redesign Required." Added a Decision Gate with specific phase-to-revisit mapping based on failure reason
+- **Phase 19** had no concrete deliverable, making resumption detection unreliable. Added a review summary template
+- **Decision Logs** added to Phases 0.5, 16, 18, 19, and 20 for consistency
+
+### Commands Streamlined
+
+Removed three commands that didn't pull their weight:
+- `/execute-plan` — invoked by `/write-plan`, not a standalone entry point
+- `/quick-web` and `/quick-mobile` — the orchestrator classifies in one question; dedicated shortcuts saved no meaningful time
+
+Added `/stack-audit` for standalone tech stack auditing without running the full orchestrator.
+
+### Hooks Cleaned Up
+
+Removed the SessionStart hook that injected `using-software-forge` into every conversation. Skill descriptions and the user's CLAUDE.md handle triggering naturally — the injection was aggressive and added friction on simple tasks.
+
+Pre-commit security scanner (PreToolUse hook) kept — it catches secrets, personal/company references, hardcoded paths, and .env files before they reach git history.
+
+### Skill Description Tuning
+
+Three skill descriptions updated based on trigger accuracy analysis (8/10 → ~10/10):
+- **brownfield-greenfield** — added "inheriting a codebase" trigger to catch inherited-project queries
+- **architecture-best-practices** — added "how to combine technologies" trigger for direct best-practice lookups
+- **stack-audit** — added negative boundary to distinguish from brownfield-greenfield
+
+### Full Changelog
+
+- feat: add stack-audit skill (15-domain × 7-layer taxonomy audit)
+- feat: add stack-compatibility-oracle skill (pre-flight architecture check)
+- feat: add architecture-best-practices skill (queryable knowledge base)
+- feat: add brownfield-greenfield skill (intent extraction + redesign comparison)
+- feat: add /stack-audit command
+- fix: expand Phase 8 from 5-line stub to full phase (81 lines)
+- fix: correct route table phase counts for all 6 project types
+- fix: add explicit Phase 15 → 16 handoff for both execution paths
+- fix: add Go/No-Go Decision Gate with loop-back in Phase 13
+- fix: add deliverable template to Phase 19
+- fix: add Decision Logs to Phases 0.5, 16, 18, 19, 20
+- fix: correct Book References label (Phase 14: "Testing Strategy" → "Writing Plans")
+- refactor: remove /execute-plan, /quick-web, /quick-mobile commands
+- refactor: remove SessionStart hook injection
+- refactor: remove orphaned hook scripts (session-start, run-hook.cmd)
+- refactor: remove orphaned license field from code-simplifier frontmatter
+- docs: update skill count from 26 to 30 across all docs
+- docs: add 4 new skills to FULL-GUIDE and QUICK-REFERENCE tables
+- docs: update command tables in README, FULL-GUIDE, QUICK-REFERENCE
+- chore: bump version to 1.2.0 across all manifests
+
+### Bundled Skills (30 total)
+- **Orchestrator**: software-forge, engineering-mentor
+- **Architecture Analysis**: stack-audit, stack-compatibility-oracle, architecture-best-practices, brownfield-greenfield
+- **Design & Planning**: brainstorming, ddia-design, writing-plans
+- **Execution**: executing-plans, subagent-driven-development, dispatching-parallel-agents, test-driven-development, systematic-debugging, verification-before-completion, using-git-worktrees, finishing-a-development-branch
+- **Code Review**: requesting-code-review, receiving-code-review
+- **Security**: security-audit, web-app-security-audit
+- **Review & Polish**: ui-polish-review, ux-usability-review, design-code-review, code-simplifier, apple-craftsman, mobile-ios-design
+- **Specialty**: voice-agent-prompt
+- **Release**: release
+- **Meta**: using-software-forge
+
+### Slash Commands (6)
+- `/software-forge` — Start the full lifecycle
+- `/brainstorm` — Standalone brainstorming
+- `/system-design` — Standalone DDIA review
+- `/write-plan` — Standalone implementation planning
+- `/security-audit` — Standalone security audit
+- `/stack-audit` — Standalone tech stack audit
+
+---
+
 ## v1.0.0 (2026-03-07)
 
 Initial release.

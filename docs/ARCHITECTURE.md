@@ -22,7 +22,7 @@ Software Forge is a skill orchestration framework for Claude Code that guides pr
 └───────────────────────────────┬─────────────────────────────────┘
                                 │
 ┌───────────────────────────────▼─────────────────────────────────┐
-│                       SKILL LAYER (26 skills)                   │
+│                       SKILL LAYER (30 skills)                   │
 │                                                                 │
 │  ┌──────────────┐ ┌────────────────┐ ┌────────────────────────┐ │
 │  │ Design &     │ │ Implementation │ │ Review & Security      │ │

@@ -146,7 +146,7 @@ case "${1:-}" in
     echo "  ./install.sh --web        Core + UI/UX + security + system design (20 skills)"
     echo "  ./install.sh --mobile     Core + iOS/macOS design + security (20 skills)"
     echo "  ./install.sh --learn      Core + engineering mentor (16 skills)"
-    echo "  ./install.sh --full       Everything (26 skills)"
+    echo "  ./install.sh --full       Everything (30 skills)"
     echo "  ./install.sh --list       List available skills"
     echo "  ./install.sh --uninstall  Remove all symlinks"
     echo "  ./install.sh skill1 ...   Install specific skills only"

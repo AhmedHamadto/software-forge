@@ -60,4 +60,9 @@ Run after implementation, before production deployment:
 
 ### Go/No-Go Decision
 [Ready / Needs retraining / Needs more data]
+
+### Decision Log — Phase 18: ML Validation
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Accepted risk:** [Risk] — [why it was accepted, what mitigates it].
+- **Deferred:** [Finding] — [why deferred, when to revisit].
 ```

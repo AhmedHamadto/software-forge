@@ -57,6 +57,9 @@ Capture what happened during the build so future projects benefit. This is not a
 
 ### Lessons for Future Projects
 - [actionable insights]
+
+### Decision Log — Phase 20: Retrospective
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
 ```
 
 ### For Learn Mode (Engineering Mentor)

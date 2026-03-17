@@ -53,4 +53,9 @@ Before brainstorming new features, understand what already exists. Designing wit
 ### Test & CI Status
 - Coverage: [What's tested, what's not]
 - Pipeline: [What runs on PR/merge/deploy]
+
+### Decision Log — Phase 0.5: System Assessment
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Rejected:** [Alternative] — [why it was rejected].
+- **User correction:** [If the user corrected a direction, capture what changed and why].
 ```

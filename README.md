@@ -46,11 +46,11 @@ In Claude Code, type: `/software-forge`
 
 It asks what you're building, classifies your project, selects the right phases, and walks you through each one.
 
-Fast-track commands: `/quick-web` (full-stack web) | `/quick-mobile` (iOS app)
+Standalone commands: `/brainstorm` | `/system-design` | `/write-plan` | `/security-audit` | `/stack-audit`
 
 ## What Makes It Different
 
-- **It's an orchestrator, not another skill.** Sequences 26 bundled skills and integrates with 349+ ecosystem skills — Figma MCP, Motion AI Kit, Trail of Bits, Context7, and more.
+- **It's an orchestrator, not another skill.** Sequences 30 bundled skills and integrates with 349+ ecosystem skills — Figma MCP, Motion AI Kit, Trail of Bits, Context7, and more.
 - **It teaches you engineering.** Learn mode wraps every phase with adaptive teaching — Socratic questions, decision gates, and competency tracking across 31 concept areas from 17 books.
 - **It integrates with the ecosystem.** Checks for available MCP servers and skills at each phase. Uses real design tokens, current docs, or falls back to book-grounded questions.
 
@@ -92,7 +92,7 @@ Pairs with [developer-guard](https://github.com/AhmedHamadto/developer-guard) fo
 ## Docs
 
 - [Quick Reference](docs/QUICK-REFERENCE.md) — One-page cheat sheet — commands, skills, workflows, gotchas
-- [Full Guide](docs/FULL-GUIDE.md) — All 26 skills, phase details, book references, troubleshooting
+- [Full Guide](docs/FULL-GUIDE.md) — All 30 skills, phase details, book references, troubleshooting
 - [Architecture](docs/ARCHITECTURE.md) — How the orchestrator, phases, and skills connect
 - [Recommended MCPs](docs/recommended-mcps.md) — Free tools that enhance specific phases
 - [Contributing](CONTRIBUTING.md) — How to add skills or improve phases

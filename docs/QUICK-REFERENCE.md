@@ -5,12 +5,10 @@
 | Goal | Run |
 |------|-----|
 | Start a new project or major feature | `/software-forge` |
-| Spin up a web app fast | `/quick-web` |
-| Spin up an iOS app fast | `/quick-mobile` |
 | Explore an idea before committing | `/brainstorm` |
 | Design a system's data/storage/distribution layer | `/system-design` |
 | Turn a design doc into implementation tasks | `/write-plan` |
-| Execute an existing plan | `/execute-plan` |
+| Audit a project's tech stack | `/stack-audit` |
 | Audit security before deploying | `/security-audit` |
 | Learn engineering while building | `/software-forge` → choose **Learn** mode |
 
@@ -19,13 +17,11 @@
 | Command | What it does |
 |---------|-------------|
 | `/software-forge` | Full lifecycle — classify, design, build, review |
-| `/quick-web` | Full-stack web, skips classification |
-| `/quick-mobile` | iOS app, skips classification |
 | `/brainstorm` | Idea → approved design doc |
 | `/system-design` | DDIA-grounded architecture review |
 | `/write-plan` | Design doc → TDD task breakdown |
-| `/execute-plan` | Run a plan with review checkpoints |
 | `/security-audit` | CSP, RLS, auth, deps, OWASP |
+| `/stack-audit` | 15-domain taxonomy — coverage, gaps, maturity |
 
 ## Skills by Category
 
@@ -39,7 +35,11 @@
 ### Architecture & Design
 | Skill | One-liner |
 |-------|-----------|
+| `architecture-best-practices` | Queryable architecture patterns KB |
+| `brownfield-greenfield` | Extract intent, redesign fresh, compare |
 | `ddia-design` | 8-phase system design (Kleppmann) |
+| `stack-audit` | 15-domain, 7-layer project taxonomy scan |
+| `stack-compatibility-oracle` | Pre-flight dependency compatibility check |
 | `writing-plans` | TDD task breakdown from specs |
 | `executing-plans` | Batch execution with checkpoints |
 
@@ -93,7 +93,7 @@
 `/software-forge` → classify → brainstorm → domain model → system design → API spec → infra → UI → UX → plan → implement → security → polish → retro
 
 **Quick feature on existing project:**
-`/brainstorm` → `/write-plan` → `/execute-plan` → `/requesting-code-review`
+`/brainstorm` → `/write-plan` → `/requesting-code-review`
 
 **Bug fix:**
 `/systematic-debugging` → fix → `/verification-before-completion`

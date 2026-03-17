@@ -52,19 +52,25 @@ Ask ONE question: **"What are you building?"**
 
 | Type | Indicators | Phase Count |
 |------|-----------|-------------|
-| **macOS App** | Desktop UI, SwiftUI, AppKit, menu bar app | 7–8 phases |
-| **iOS Mobile App** | iPhone/iPad, SwiftUI, UIKit, App Store | 9–14 phases |
-| **Web Frontend** | React, Vue, static site, no backend | 8–9 phases |
-| **Full-Stack Web** | Frontend + database + API + auth | 14–15 phases |
-| **Voice Agent** | LiveKit, telephony, STT/TTS, conversational AI | 13 phases |
-| **Edge/IoT + ML** | Hardware devices, computer vision, ML pipeline, fleet management | 15–18 phases |
+| **macOS App** | Desktop UI, SwiftUI, AppKit, menu bar app | 8–10 phases |
+| **iOS Mobile App** | iPhone/iPad, SwiftUI, UIKit, App Store | 8–15 phases |
+| **Web Frontend** | React, Vue, static site, no backend | 8–10 phases |
+| **Full-Stack Web** | Frontend + database + API + auth | 14–17 phases |
+| **Voice Agent** | LiveKit, telephony, STT/TTS, conversational AI | 13–15 phases |
+| **Edge/IoT + ML** | Hardware devices, computer vision, ML pipeline, fleet management | 16–19 phases |
 
 **Sub-classification questions (if needed):**
 - Mobile/Web: "Does it have a backend?" — if yes, add full-stack phases
 - Any type: "Does it integrate with external services?" — if yes, add resilience phase
 - Any type: "Will this be deployed to cloud infrastructure you manage?" — if yes, add infrastructure phase
-- Any type: "Is this a new project or adding to an existing system?" — if existing, add system assessment phase
+- Any type: "Is this a new project or adding to an existing system?" — if existing, add system assessment phase. If user wants to evaluate a full redesign, suggest `/brownfield-greenfield` instead.
 - Any type with UI: "Does your project have state transitions, loading sequences, or interactions that would benefit from motion design?" — if yes, add motion design phase
+
+**Available cross-cutting skills (invoke during relevant phases):**
+- `/stack-audit` — Run during Phase 0.5 or standalone to audit the existing tech stack against the 15-domain taxonomy
+- `/stack-compatibility-oracle` — Run after Phase 1 (Brainstorming) when a tech stack is proposed, to check for architectural incompatibilities before committing
+- `/architecture-best-practices` — Queryable reference layer; invoke during any design phase (2–13) when evaluating technology choices or diagnosing issues
+- `/brownfield-greenfield` — Alternative to Phase 0.5 for projects considering a major redesign; extracts intent, strips tech, proposes fresh architecture
 
 ### Route Table
 | Phase | macOS | iOS | Web FE | Full-Stack | Voice | Edge/IoT+ML |
@@ -233,6 +239,8 @@ If starting a new session mid-project:
 | Ignoring cloud costs until the bill arrives | Phase 13 (Cost Analysis) exists for this — unit economics matter |
 | Skipping the phase file read | Always read the phase file, even if you think you remember it |
 | Designing UI before knowing the API shape | UI/UX/Motion phases come after API spec for a reason |
+| Committing to a tech stack without compatibility checking | Run `/stack-compatibility-oracle` after brainstorming to catch blockers early |
+| Rewriting a brownfield system without extraction | Use `/brownfield-greenfield` to separate intent from accident before proposing changes |
 
 ---
 ## Book References
@@ -252,6 +260,6 @@ If starting a new session mid-project:
 | 12. Motion Design | *The Illusion of Life* | Frank Thomas & Ollie Johnston |
 | 12. Motion Design | *Animation at Work* | Rachel Nabors |
 | 12. Motion Design | *Designing Interface Animation* | Val Head |
-| 14. Testing Strategy | *Growing Object-Oriented Software, Guided by Tests* | Freeman & Pryce |
+| 14. Writing Plans | *Growing Object-Oriented Software, Guided by Tests* | Freeman & Pryce |
 | 17. Observability | *Observability Engineering* | Charity Majors |
 | 18. ML Validation | *Reliable Machine Learning* | Cathy Chen et al. |

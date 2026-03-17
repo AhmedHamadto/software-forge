@@ -44,13 +44,11 @@ These commands are available in Claude Code after installation:
 | Command | Description |
 |---------|-------------|
 | `/software-forge` | Start a new project or major feature — full lifecycle |
-| `/quick-web` | Fast-track a full-stack web project — skips classification |
-| `/quick-mobile` | Fast-track an iOS mobile app — skips classification |
 | `/brainstorm` | Turn an idea into an approved design doc |
 | `/system-design` | Run a structured system design review (DDIA) |
 | `/write-plan` | Create a TDD implementation plan from a design doc |
-| `/execute-plan` | Execute an implementation plan with review checkpoints |
 | `/security-audit` | Audit CSP, RLS, auth, dependencies, and OWASP vulnerabilities |
+| `/stack-audit` | Audit a project's tech stack against the 15-domain taxonomy — coverage matrix, gap analysis, maturity score |
 
 ## What's Inside
 
@@ -70,8 +68,12 @@ These commands are available in Claude Code after installation:
 
 | Skill | Purpose |
 |-------|---------|
+| **architecture-best-practices** | Queryable knowledge base of architecture patterns |
 | **brainstorming** | Turns ideas into approved design docs through collaborative dialogue |
+| **brownfield-greenfield** | Extract intent from existing project, redesign fresh, compare |
 | **ddia-design** | 8-phase system design review grounded in *Designing Data-Intensive Applications* |
+| **stack-audit** | Scan any software project against a 15-domain, 7-layer taxonomy |
+| **stack-compatibility-oracle** | Pre-flight architecture dependency check |
 | **writing-plans** | Produces bite-sized TDD implementation plans from design docs |
 
 ### Implementation & Execution

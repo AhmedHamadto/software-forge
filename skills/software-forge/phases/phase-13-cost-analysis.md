@@ -79,7 +79,17 @@ After completing the analysis, present a summary:
 [Proceed / Proceed with mitigations / Redesign required]
 ```
 
-If "Redesign required," identify which design phases need revisiting and why before proceeding to Phase 14.
+### Go/No-Go Decision Gate
+
+If the verdict is **Redesign Required:**
+1. **STOP.** Do not proceed to Phase 14.
+2. Identify which design phases need revisiting based on the failure reason:
+   - Cost too high → revisit Phase 9 (Infrastructure) or Phase 3 (System Design)
+   - Risk unacceptable → revisit Phase 4 (Resilience) or Phase 3 (System Design)
+   - Fundamental scope issue → revisit Phase 1 (Brainstorming)
+3. Present the loop-back recommendation to the user for approval.
+4. Return to the identified phase and re-execute from there.
+5. Re-run Phase 13 after the redesign to verify the issues are resolved.
 
 Append the following to the design doc:
 

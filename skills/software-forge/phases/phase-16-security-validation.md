@@ -16,3 +16,14 @@ Run BEFORE deployment. Verify that security-by-design decisions from Phase 3 wer
 If developer-guard is installed, invoke its repo-scan and legal-audit skills here. If not, continue with built-in security validation.
 
 **Output:** Security audit report
+
+### Deliverable
+
+Append the following to the design doc:
+
+```markdown
+### Decision Log — Phase 16: Security Validation
+- **[Topic]:** Chose [X] over [Y] because [reasoning].
+- **Accepted risk:** [Risk] — [why it was accepted, what mitigates it].
+- **Deferred:** [Finding] — [why deferred, when to revisit].
+```
