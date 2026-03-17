@@ -5,6 +5,13 @@
 .private-journal/
 REVIEW.md
 Future Development.txt
+marketing-materials.md
+
+# Eval workspace
+software-forge-workspace/
+
+# Screenshots
+Screenshots/
 
 # Claude Code
 .claude/
